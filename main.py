@@ -19,7 +19,7 @@ def switch_mods(version):
         shutil.copy(os.path.join(version_path, mod), os.path.join(MINECRAFT_MODS_PATH, mod))
 
 def main():
-    version = input("Entrez la version de Minecraft pour laquelle vous voulez activer les mods : ")
+    version = input("Enter the version of Minecraft for which you want to enable mods: ")
     switch_mods(version)
 
 if __name__ == "__main__":

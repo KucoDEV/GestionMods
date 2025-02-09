@@ -1,41 +1,41 @@
-# Gestionnaire de Mods Minecraft
+# Minecraft Mod Manager
 
-Ce script Python permet de basculer rapidement entre différentes versions de mods pour Minecraft en fonction de la version du jeu utilisée.
+This Python script allows you to quickly switch between different versions of Minecraft mods based on the game version you are using.
 
-## Fonctionnalités
-- Suppression automatique des mods existants dans le dossier `mods`
-- Chargement des mods spécifiques à une version donnée
-- Gestion simplifiée des mods Minecraft sans devoir les déplacer manuellement
+## Features
+- Automatically removes existing mods in the `mods` folder
+- Loads specific mods for a given version
+- Simplifies Minecraft mod management without manual file movement
 
-## Prérequis
-- Python 3 installé sur votre système
-- Un dossier organisé avec des sous-dossiers pour chaque version de mods dans le répertoire `C:/Users/VOTRE_NOM/AppData/Roaming/.minecraft/mods/ (remplacez VOTRE_NOM par votre nom d'utilisateur Windows)`
+## Prerequisites
+- Python 3 installed on your system
+- A structured folder with subfolders for each mod version in the directory `C:/Users/YOUR_NAME/AppData/Roaming/.minecraft/mods/ (replace YOUR_NAME with your Windows username)`
 
 ## Installation
-1. Clonez ce dépôt sur votre machine locale :
+1. Clone this repository to your local machine:
    ```sh
-   git clone https://github.com/votre-utilisateur/nom-du-repo.git
+   git clone https://github.com/your-username/repository-name.git
    ```
-2. Accédez au dossier du projet :
+2. Navigate to the project folder:
    ```sh
-   cd nom-du-repo
+   cd repository-name
    ```
-3. Assurez-vous que Python est installé et accessible depuis votre terminal.
+3. Ensure Python is installed and accessible from your terminal.
 
-## Utilisation
-1. Ouvrez `main.py` et modifiez la variable `MINECRAFT_MODS_PATH` pour qu'elle corresponde à votre nom d'utilisateur Windows :
+## Usage
+1. Open `main.py` and modify the `MINECRAFT_MODS_PATH` variable to match your Windows username:
    ```python
-   MINECRAFT_MODS_PATH = "C:/Users/VOTRE_NOM/AppData/Roaming/.minecraft/mods"
+   MINECRAFT_MODS_PATH = "C:/Users/YOUR_NAME/AppData/Roaming/.minecraft/mods"
    ```
-2. Exécutez le script avec la commande suivante :
+2. Run the script using the following command:
    ```sh
    python main.py
    ```
-3. Entrez la version de Minecraft pour laquelle vous souhaitez activer les mods.
-4. Le script supprimera les anciens mods et copiera les mods correspondants à la version spécifiée.
+3. Enter the Minecraft version for which you want to activate mods.
+4. The script will delete old mods and copy the ones corresponding to the specified version.
 
-## Structure du dossier `mods`
-Le dossier `mods` doit être organisé de la manière suivante :
+## `mods` Folder Structure
+The `mods` folder should be structured as follows:
 ```
 .minecraft/
   ├── mods/
@@ -47,11 +47,11 @@ Le dossier `mods` doit être organisé de la manière suivante :
   │   │   ├── mod4.jar
 ```
 
-Le script s'assurera que seuls les mods de la version sélectionnée sont présents dans le dossier `mods` principal.
+The script ensures that only the mods for the selected version are present in the main `mods` folder.
 
-## Avertissement
-- Assurez-vous de sauvegarder vos mods avant d'utiliser le script.
-- Vérifiez que les fichiers `.jar` sont bien placés dans les dossiers respectifs.
+## Warning
+- Make sure to back up your mods before using the script.
+- Verify that `.jar` files are correctly placed in their respective folders.
 
-## Licence
-Ce projet est sous licence MIT. Vous êtes libre de le modifier et de le redistribuer.
+## License
+This project is licensed under the MIT license. You are free to modify and redistribute it.

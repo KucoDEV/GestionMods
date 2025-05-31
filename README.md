@@ -1,41 +1,70 @@
-# Minecraft Mod Manager
+<h1 align="center">Minecraft Mod Manager</h1>
 
-This Python script allows you to quickly switch between different versions of Minecraft mods based on the game version you are using.
+<div align="center">
+    <p>Script Python pour basculer rapidement entre différentes versions de mods Minecraft selon la version du jeu utilisée.</p>
+    <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Python/python3.svg">
+</div>
 
-## Features
-- Automatically removes existing mods in the `mods` folder
-- Loads specific mods for a given version
-- Simplifies Minecraft mod management without manual file movement
+<br>
 
-## Prerequisites
-- Python 3 installed on your system
-- A structured folder with subfolders for each mod version in the directory `C:/Users/YOUR_NAME/AppData/Roaming/.minecraft/mods/ (replace YOUR_NAME with your Windows username)`
+# Sommaire
 
-## Installation
-1. Clone this repository to your local machine:
-   ```sh
-   git clone https://github.com/your-username/repository-name.git
+- [Fonctionnalités](#fonctionnalités)
+- [Pré-requis](#pré-requis)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Structure du dossier mods](#structure-du-dossier-mods)
+- [Avertissements](#avertissements)
+
+# Fonctionnalités
+
+- Suppression automatique des mods existants dans le dossier `mods`
+- Chargement des mods correspondant à une version spécifiée de Minecraft
+- Gestion simplifiée des mods sans manipulation manuelle
+
+# Pré-requis
+
+- Python 3 installé
+- Structure de dossier correcte dans `C:/Users/VOTRE_NOM/AppData/Roaming/.minecraft/mods/`  
+  *(Remplacez `VOTRE_NOM` par votre nom d’utilisateur Windows)*
+
+# Installation
+
+1. Cloner ce dépôt :
+   ```bash
+   git clone https://github.com/KucoDEV/GestionMods.git
    ```
-2. Navigate to the project folder:
-   ```sh
-   cd repository-name
-   ```
-3. Ensure Python is installed and accessible from your terminal.
 
-## Usage
-1. Open `main.py` and modify the `MINECRAFT_MODS_PATH` variable to match your Windows username:
+2. Se déplacer dans le dossier :
+
+   ```bash
+   cd GestionMods
+   ```
+
+3. Vérifier que Python est bien installé et accessible.
+
+# Utilisation
+
+1. Modifier la variable `MINECRAFT_MODS_PATH` dans `main.py` :
+
    ```python
-   MINECRAFT_MODS_PATH = "C:/Users/YOUR_NAME/AppData/Roaming/.minecraft/mods"
+   MINECRAFT_MODS_PATH = "C:/Users/VOTRE_NOM/AppData/Roaming/.minecraft/mods"
    ```
-2. Run the script using the following command:
-   ```sh
+
+2. Lancer le script :
+
+   ```bash
    python main.py
    ```
-3. Enter the Minecraft version for which you want to activate mods.
-4. The script will delete old mods and copy the ones corresponding to the specified version.
 
-## `mods` Folder Structure
-The `mods` folder should be structured as follows:
+3. Entrer la version de Minecraft voulue (ex: `1.16.5`).
+
+Le script supprimera les mods actuels puis copiera ceux de la version demandée.
+
+# Structure du dossier `mods`
+
+Organisez vos mods ainsi :
+
 ```
 .minecraft/
   ├── mods/
@@ -47,11 +76,24 @@ The `mods` folder should be structured as follows:
   │   │   ├── mod4.jar
 ```
 
-The script ensures that only the mods for the selected version are present in the main `mods` folder.
+Seuls les mods de la version sélectionnée seront présents dans le dossier `mods` après exécution.
 
-## Warning
-- Make sure to back up your mods before using the script.
-- Verify that `.jar` files are correctly placed in their respective folders.
+# Avertissements
 
-## License
-This project is licensed under the MIT license. You are free to modify and redistribute it.
+* Sauvegardez vos mods avant utilisation.
+* Assurez-vous que les `.jar` sont bien dans les bons sous-dossiers.
+* 
+# Contributeurs
+
+Merci aux personnes et ressources ayant contribué au projet :
+
+- [KucoDEV](https://github.com/KucoDEV) — Développement principal, conception et maintenance.
+- [GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) — Sécurité et bonnes pratiques.
+
+Vous souhaitez contribuer ? Consultez le [guide de contribution](CONTRIBUTING.md) ou ouvrez une *issue* pour proposer des améliorations.
+
+<p align="center">
+    <img alt="Footer" src="https://i.imgur.com/9Ojjug7.png">
+    <br><br>
+    <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/LicenceMIT/licencemit3.svg">
+</p>
